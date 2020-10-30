@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace IndianStatesCensus
+namespace IndiaCensusDataDemo
 {
     class Program
     {
