@@ -35,18 +35,18 @@ namespace CensusAnalyserTest
         }
 
         /// <summary>
-        /// TC 1.1 : 
+        /// TC 2.1 : 
         /// Given the states code csv file when read should return census data count.
         /// </summary>
         [Test]
-        public void GivenIndianStateCensusDataFile_WhenRead_ShouldReturnCensusDataCount()
+        public void GivenIndianStateCodeDataFile_WhenRead_ShouldReturnCensusDataCount()
         {
-            totalRecords = censusAnalyser.LoadCensusData(CensusAnalyser.Country.INDIA, indianStateCensusFilePath, indianStateCensusHeaders);
-            Assert.AreEqual(29, totalRecords.Count);
+            stateRecords = censusAnalyser.LoadCensusData(CensusAnalyser.Country.INDIA, indianStateCodeFilePath, indianStateCodeHeaders);
+            Assert.AreEqual(37, stateRecords.Count);
         }
 
         /// <summary>
-        /// TC 1.2 : 
+        /// TC 2.2 : 
         /// Given the wrong file path of code data should throw custom exception.
         /// </summary>
         [Test]
@@ -57,7 +57,7 @@ namespace CensusAnalyserTest
         }
 
         /// <summary>
-        /// TC 1.3 : 
+        /// TC 2.3 : 
         /// Given the wrong indian code file type should throw custom exceotion.
         /// </summary>
         [Test]
@@ -68,7 +68,7 @@ namespace CensusAnalyserTest
         }
 
         /// <summary>
-        /// TC 1.4 : 
+        /// TC 2.4 : 
         /// Given the state code CSV file when correct but delimeter incorrect should throw custom exception.
         /// </summary>
         [Test]
@@ -79,7 +79,7 @@ namespace CensusAnalyserTest
         }
 
         /// <summary>
-        /// TC 1.5 : 
+        /// TC 2.5 : 
         /// Given the state code CSV file when correct but CSV header incorrect should throw custom exception.
         /// </summary>
         [Test]
@@ -90,3 +90,4 @@ namespace CensusAnalyserTest
         }
     }
 }
+  
